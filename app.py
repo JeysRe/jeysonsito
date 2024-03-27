@@ -4,68 +4,85 @@ app = Flask(__name__)
 @app.route('/')
 def hello_geek():
     return '''<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta de Presentación</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega Font Awesome -->
+    <title>Promociones - Restaurante Delicias</title>
     <style>
+        /* Estilos CSS para dar formato */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-        }
-        .card {
-            background-color: #FAE5D3; /* Cambia el color de fondo según tu preferencia */
+            background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 40px; /* Ajusta este valor para aumentar los márgenes */
-            max-width: 300px;
-            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
             text-align: center;
+            color: #333;
         }
-        .card img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+        .promotion {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
         }
-        .card h1 {
-            margin-bottom: 10px;
-            font-size: 24px;
-            color: #333333; /* Cambia el color del texto según tu preferencia */
+        .promotion h2 {
+            margin-top: 0;
+            color: #666;
         }
-        .card p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #666666; /* Cambia el color del texto según tu preferencia */
+        .promotion p {
+            color: #777;
         }
-        .social-icons a {
-            margin-right: 10px;
-            color: #666666;
-            text-decoration: none;
+        .promotion img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <img src="https://images.pexels.com/photos/2272853/pexels-photo-2272853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile Picture">
-    <h1>Sarah Estephany Nuñez</h1>
-    <p>Desarrolladora Web</p>
-    <p>Correo Electrónico: sharon@gmail.com</p>
-    <p>Teléfono: +51 915942185</p>
-    <div class="social-icons">
-        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://wa.me/51915942185"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+<div class="container">
+    <h1>Promociones - Restaurante Delicias</h1>
+    
+    <div class="promotion">
+        <img src="https://static.wixstatic.com/media/65a025_5cf78d2c1bf24f279a09769827e5668c~mv2.jpg/v1/fill/w_640,h_334,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/65a025_5cf78d2c1bf24f279a09769827e5668c~mv2.jpg" alt="Descuento de Apertura">
+        <div>
+            <h2>Descuento de Apertura</h2>
+            <p>¡Visítanos en nuestra gran inauguración y obtén un 10% de descuento en tu primera compra!</p>
+        </div>
+    </div>
+    
+    <div class="promotion">
+        <img src="https://www.menuspararestaurantes.com/wp-content/uploads/2022/12/promociones-en-tu-restaurante-combos2.jpg" alt="Happy Hour">
+        <div>
+            <h2>Happy Hour</h2>
+            <p>De lunes a viernes de 5pm a 7pm, disfruta de nuestras bebidas alcohólicas con un 20% de descuento.</p>
+        </div>
+    </div>
+    
+    <div class="promotion">
+        <img src="https://i0.wp.com/ofertasahora.com/wp-content/uploads/2018/10/Ultimos-dias-de-la-promocion-2x1-en-restaurante-la-pampa-OCtubre-2018.jpg?resize=794%2C1024&ssl=1" alt="Menú del Día">
+        <div>
+            <h2>Menú del Día</h2>
+            <p>Cada día te ofrecemos un menú especial por solo $10. ¡No te lo pierdas!</p>
+        </div>
     </div>
 </div>
 
 </body>
 </html>
+
 '''
 
 
